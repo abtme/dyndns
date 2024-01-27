@@ -1,0 +1,10 @@
+version: '3'
+services:
+  updater:
+    build: ./dyndns
+    environment:
+      TOKEN: ${TOKEN}
+      DOMAIN: ${DOMAIN}
+      RECORD: ${RECORD}
+    volumes:
+      - ./script:/app
